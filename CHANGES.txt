@@ -1,0 +1,69 @@
+===   FILE NOTES  ===
+
+This file contains a list of changes between versions.
+All version headers include #.#.# (type) - release date - author
+Individual changes are bulleted in the format of:
+ - level 1 bullet
+    * level 2 bullet
+       + level 2 bullet
+If a change is made by someone other than the main author of the version, this
+should be noted at the end of the change. For example:
+ - Added SOMECOMMAND support - bob
+
+=== BEGIN CHANGES ===
+
+ver in progress - thaveman
+ - Added reason support to PART
+ - Implemented multiple targets (comma-seperated) for JOIN, PART, PRIVMSG,
+   NOTICE, WHOIS
+
+0.1.1 (alpha) - Nov 15, 2003 - thaveman
+ - Initial release. Here's a list of some of the included features:
+    * Allows IRC clients to connect and register.
+    * Supports the generation and maintenence of channels, including, but not
+      limited to: JOIN, PART, QUIT, TOPIC, MODE, PRIVMSG, NOTICE. Some channel
+      modes don't have any effect at this point.
+    * Supports private messaging via PRIVMSG and NOTICE.
+    * Includes the ISON command, which mIRC and other clients use for "notify"
+      lists.
+    * Allows the use of USERHOST.
+    * Minor support for WHOIS, WHO, and LIST.
+    * Probably other things I can't remember at the moment.
+
+0.2.0 (alpha) - March 5, 2004 - markhale
+ - Reorganised classes:
+    * Moved classes into packages.
+    * Turned some classes into inner classes.
+    * Most arrays now replaced by collections.
+    * Reduced use of public statics in jIRCd.class.
+    * Ping timer thread converted into a java.util.TimerTask.
+    * Thread classes changed from "extends Thread" to "implements Runnable".
+ - More IRC commands added:
+    * KICK, STATS, INVITE, NAMES, AWAY, INFO, TIME, MOTD.
+ - Switched to log4j for logging.
+ - Bug fixes:
+    * moderated channels work.
+
+0.3.0 (alpha) - March 19, 2004 - markhale
+ - New IRC command plugin classes.
+ - Conf file changed to a standard Java properties file.
+ - Almost all IRC commands implemented in some fashion.
+ - Some work on establishing server-server connections.
+
+0.3.1 (alpha) - March 31, 2004 - markhale
+ - New Message class added to handle IRC message creation and parsing.
+ - Bug fixes:
+    * fixed synchronization problem on quit.
+    * better NAMES support.
+    * fixed ping timer bug.
+
+0.3.2 (alpha) - April 14, 2004 - markhale
+ - Added SSL support!
+
+0.4.0 (beta) - May 9, 2004 - markhale
+ - Implemented plugin auto-loader.
+ - New version released.
+
+0.4.1 (beta) - May 14, 2004 - markhale
+ - Fixes to server-server connections (still incomplete).
+ - Implemented SHA encryption for operator passwords.

@@ -1,0 +1,43 @@
+INSTALLATION
+============
+
+Requirements
+------------
+
+You will need:
+ - Ant (http://ant.apache.org/)
+ - Log4j (http://logging.apache.org/log4j/docs/)
+
+Build
+-----
+
+Binaries are not currently provided.  Building is very straightforward.
+
+Run Ant.
+
+Run
+---
+
+Edit and modify the properties file jircd.properties as appropriate.
+Edit and modify the script jircd.cmd as appropriate.
+Execute the script.
+
+Notes
+-----
+
+The motd.txt and INFO.txt files are used by the MOTD and INFO IRC commands, respectively.
+
+IRC operators have the rights to change user and channel modes.
+
+Server-to-server connections are not fully implemented.
+
+Some commands that still need to be added:
+DIE?
+RESTART?
+SQUIT
+TRACE
+WHOWAS
+
+
+-Tyrel Haveman
+-Mark Hale

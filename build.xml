@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="all">
+	<property name="version" value="0.4.0-beta"/>
+
+	<target name="classes" description="Compiles classes">
+		<javac debug="on" srcdir="classes"/>
+	</target>
+
+	<target name="jar" description="Create JARs">
+		<jar jarfile="jircd.jar">
+			<manifest>
+				<attribute name="Main-Class" value="jircd.jIRCd"/>
+			</manifest>
+			<fileset dir="classes" includes="jircd/*.class"/>
+			<fileset dir="classes" includes="jircd/irc/*.class"/>
+		</jar>
+		<mkdir dir="plugins"/>
+		<jar jarfile="plugins/irc.jar">
+			<fileset dir="classes" includes="jircd/irc/commands/*.class"/>
+		</jar>
+		<jar jarfile="plugins/ircx.jar">
+			<fileset dir="classes" includes="jircd/ircx/**/*.class"/>
+		</jar>
+	</target>
+
+	<target name="src" description="Zip sources">
+		<zip destfile="j-ircd-${version}.zip">
+			<zipfileset prefix="jircd-${version}" dir="." includes="build.xml jircd.cmd jircd.properties log4j.xml *.txt"/>
+			<zipfileset prefix="jircd-${version}" dir="." includes="classes/**/*.java"/>
+		</zip>
+	</target>
+
+	<target name="clean">
+		<delete>
+			<fileset dir="classes" includes="**/*.class"/>
+		</delete>
+	</target>
+
+	<target name="all" depends="classes, jar"/>
+</project>
