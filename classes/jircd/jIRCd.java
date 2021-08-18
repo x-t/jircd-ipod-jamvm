@@ -124,16 +124,16 @@ public class jIRCd {
 
 		// now just hang out forever
 		
-		System.out.println("Press enter to terminate.");
-		try {
-			System.in.read();
-		} catch (IOException e) {
-			System.err.println(e + " occured while waiting for program termination.");
-			System.exit(1);
-		} finally {
-			System.out.println("Shutting down...");
-			jircd.shutdown();
-		}
+		// System.out.println("Press enter to terminate.");
+		// try {
+		// 	System.in.read();
+		// } catch (IOException e) {
+		// 	System.err.println(e + " occured while waiting for program termination.");
+		// 	System.exit(1);
+		// } finally {
+		// 	System.out.println("Shutting down...");
+		// 	jircd.shutdown();
+		// }
 		//System.exit(0);
 	}
 

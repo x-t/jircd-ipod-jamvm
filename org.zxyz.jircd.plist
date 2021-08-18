@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>org.zxyz.jircd</string>
+    <key>WorkingDirectory</key>
+    <string>/opt/jircd</string>
+    <key>StandardOutPath</key>
+    <string>/opt/jircd/jircd.stdout.log</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/java</string>
+        <string>-jar</string>
+        <string>/opt/jircd/jircd_new.jar</string>
+        <string>/opt/jircd/jircd.properties</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+</dict>
+</plist>
