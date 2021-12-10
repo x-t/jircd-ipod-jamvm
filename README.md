@@ -2,6 +2,14 @@
 
 jIRCd 0.4.1-beta (2004) port for primitive (iPod-2G/iOS-4.2.1) JamVM (jamvm-1.5.0/java-5) systems.
 
+## Security
+
+Without proper SSL support and the fact that it's a 17 year old project, don't expect a whole lot of security to your conversations.
+
+That being said, however,
+
+[log4j is NOT A DEPENDENCY](https://www.pcmag.com/news/countless-serves-are-vulnerable-to-apache-log4j-zero-day-exploit)! 9 STEPS AHEAD MOTHERF*CKERS!!!! LMFAOOOOOOO
+
 ## Changes
 
 * Removes dependencies
